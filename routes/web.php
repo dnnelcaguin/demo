@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //localhost:8000/
-Route::get('/', function () {
-   return view('home');
+//Required Parameter
+
+//passing of data to views
+Route::get('/home/{id}', function ($id) {
+   	return view('home',['studentid' => $id , 'studentname' => "Lily Potter" ]);
 });
 
 //localhost:8000/about
-Route::get('/about', function () {
-   return view('about');
+//optional parameter
+Route::get('/about/{id?}', function ($id = "201512345") {
+   	return view('about',['studentid' => $id , 'studentname' => 'Tom Riddle' ]);
 });
 
 //localhost:8000/contact
