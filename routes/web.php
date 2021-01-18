@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +15,34 @@ use Illuminate\Support\Facades\Route;
 //localhost:8000/
 //Required Parameter
 
+//home
+Route::get('/home',[HomeController::class,'home']);
+
+Route::post('/home',[HomeController::class,'displayData']);
+
+//index
+Route::get('/index',[HomeController::class,'index']);
+
+
+
+
+
+
+
+
+
+
+
+
 //passing of data to views
-Route::get('/home/{id}', function ($id) {
-   	return view('home',['studentid' => $id , 'studentname' => "Lily Potter" ]);
-});
+/*Route::get('/home', function () {
+   	return view('home');
+
+});*/
+
+/*Route::get('/index', function () {
+   return view('app');
+});*/
 
 //localhost:8000/about
 //optional parameter
@@ -30,3 +54,7 @@ Route::get('/about/{id?}', function ($id = "201512345") {
 Route::get('/contact', function () {
    return view('contact');
 });
+
+
+
+
