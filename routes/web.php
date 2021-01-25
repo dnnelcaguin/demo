@@ -18,13 +18,13 @@ use App\Http\Controllers\HomeController;
 //home
 Route::get('/home',[HomeController::class,'home']);
 
-Route::post('/home',[HomeController::class,'displayData']);
+Route::post('/home',[HomeController::class,'insertData']);
 
 //index
 Route::get('/index',[HomeController::class,'index']);
 
 
-
+Route::get('/delete/{id}',[HomeController::class,'deleteData']);
 
 
 

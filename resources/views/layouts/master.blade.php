@@ -26,7 +26,7 @@
 <body>
 	<div class="container">
 	<nav class="nav">
-				<a class="navbar-brand" href="web.php">Home</a>
+				<a class="navbar-brand" href="/home">Home</a>
   				<a class="nav-link active" href="about.php">About</a>
   				<a class="nav-link" href="#">Contact</a>
   				<a class="nav-link" href="#">Services</a>
