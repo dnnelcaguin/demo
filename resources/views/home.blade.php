@@ -38,6 +38,7 @@
     			<td>{{ $users->address }}</td>
     			<td>{{ $users->contact }}</td>
     			<td><a href="/delete/{{$users->id}}">DELETE</a></td>
+    			<td><a href="/edit/{{$users->id}}">EDIT</a></td>
     		</tr>
     		@endforeach
 

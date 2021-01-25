@@ -25,8 +25,10 @@ Route::get('/index',[HomeController::class,'index']);
 
 
 Route::get('/delete/{id}',[HomeController::class,'deleteData']);
+Route::get('/edit/{id}',[HomeController::class,'editData']);
 
 
+Route::post('/home/{id}',[HomeController::class,'updateData']);
 
 
 
